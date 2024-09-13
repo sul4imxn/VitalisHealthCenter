@@ -1,0 +1,81 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user=scalable=no">
+    <title>Pharmacy</title>
+    <link rel="icon" type="image/x-icon" href="logo.ico">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+ <header>   
+    <div class="logo">
+        <img src="logo.png" alt="logo">
+    </div>
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="Doctors.html">Doctors</a></li>
+        <li><a href="Consultation.html">Consultation</a></li>
+        <li><a href="pharmacy.html">Pharmacy</a></li>
+    </ul>
+</nav>
+ </header>
+
+ <main>
+    <div class="main-label-container">
+        <h1 class="title">Vitalis Health Center</h1>
+    </div> 
+
+    <div class="container">
+        <div class="pharmacy-box">
+            <div class="medicine-selection">
+                <h3>Select Medicine</h3>
+                <form>
+                    <label for="medicine">Medicine:</label>
+                    <select id="medicine" name="medicine">
+                        <option value="Med1">Panadol</option>
+                        <option value="Med2">ibuprofen</option>
+                        <option value="Med3">Amoxcillin</option>
+                        <option value="Med4">metformin</option>
+                        <option value="Med5">zinet</option>
+                        <option value="Med6">losartan</option>
+                        <option value="Med7">omeprazole</option>
+                        <option value="Med8">citrazene</option>
+                        <option value="Med9">ciprofloxacin</option>
+                        <option value="Med10">zincovit</option>
+
+                    </select>
+                    <label for="quantity">quantity</label>
+                    <input type="number" id="quantity" name="quantity" value="1">
+
+                    <button type="submit" disabled>Add to summary</button>
+                </form>
+            </div>
+            <div class="medicine-summary">
+                <h3>Summary</h3>
+                <div class="summary-list">
+                    <p>empty cart</p>
+                </div>
+                <button type="submit" disabled>save&publish</button>
+
+            </div>
+        </div>
+    </div>
+</main>
+<footer>
+    <div class="footer">
+       <p>Contact us on +86 170 5821 1136</p>
+        <p>VitaliHealthCenter@gmail.com</p>
+        <p>Follow our socials</p>
+    </div>
+ </footer>
+</body>
+</html>
