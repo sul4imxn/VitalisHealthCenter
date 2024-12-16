@@ -1,81 +1,232 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user=scalable=no">
-    <title>Pharmacy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pharmacy</title>
     <link rel="icon" type="image/x-icon" href="logo.ico">
     <link rel="stylesheet" href="style.css">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
 
- <header>   
+<header>   
     <div class="logo">
         <img src="logo.png" alt="logo">
     </div>
-<nav>
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="Doctors.html">Doctors</a></li>
-        <li><a href="Consultation.html">Consultation</a></li>
-        <li><a href="pharmacy.html">Pharmacy</a></li>
-    </ul>
-</nav>
- </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="Doctors.html">Doctors</a></li>
+            <li><a href="Consultation.html">Consultation</a></li>
+            <li><a href="pharmacy.html">Pharmacy</a></li>
+        </ul>
+    </nav>
+</header>
 
- <main>
+<main>
     <div class="main-label-container">
         <h1 class="title">Vitalis Health Center</h1>
     </div> 
 
     <div class="container">
         <div class="pharmacy-box">
-            <div class="medicine-selection">
+            <div class="medicine-selection"> 
                 <h3>Select Medicine</h3>
-                <form>
-                    <label for="medicine">Medicine:</label>
-                    <select id="medicine" name="medicine">
-                        <option value="Med1">Panadol</option>
-                        <option value="Med2">ibuprofen</option>
-                        <option value="Med3">Amoxcillin</option>
-                        <option value="Med4">metformin</option>
-                        <option value="Med5">zinet</option>
-                        <option value="Med6">losartan</option>
-                        <option value="Med7">omeprazole</option>
-                        <option value="Med8">citrazene</option>
-                        <option value="Med9">ciprofloxacin</option>
-                        <option value="Med10">zincovit</option>
+                <form id="order-form">
 
+                    <label for="anagelics">anagelics</label>
+                    <select id="anagelics" name="anagelics">
+                        <option value="panadol" data-price="5">panadol</option>
+                        <option value="bruffen" data-price="8">bruffen</option>
+                        <option value="asprin" data-price="6">asprin</option>
+                        <option value="acetaminophen" data-price="9">acetaminophen</option>
+                        <option value="diclofenac" data-price="10">diclofenac</option>
+                        <option value="ketoprofen" data-price="12">ketoprofen</option>
                     </select>
-                    <label for="quantity">quantity</label>
-                    <input type="number" id="quantity" name="quantity" value="1">
+                    <label for="anagelics-quantity">Quantity</label>
+                    <input type="number" id="anagelics-quantity" name="anagelics-quantity" value="1" min="0">
 
-                    <button type="submit" disabled>Add to summary</button>
+                    <label for="antibiotics">Antibiotics</label>
+                    <select id="antibiotics" name="antibiotics">
+                        <option value="amoxicillin" data-price="10">amoxicillin</option>
+                        <option value="Augmentin" data-price="5">Augmentin</option>
+                        <option value="Flagyl" data-price="9">Flagyl</option>
+                        <option value="Cipro" data-price="7">Cipro</option>
+                        <option value="Zithromax" data-price="2">Zithromax</option>
+                        <option value="Avelox" data-price="3">Avelox</option>
+                    </select>
+                    <label for="antibiotics-quantity">Quantity</label>
+                    <input type="number" id="antibiotics-quantity" name="antibiotics-quantity" value="1" min="0">
+
+
+                    <label for="antidepresseants">Antidepressants</label>
+                    <select id="antidepresseants" name="antidepresseants">
+                        <option value="Prozac" data-price="10">Prozac</option>
+                        <option value="Paxil" data-price="5">Paxil</option>
+                        <option value="Zoloft" data-price="9">Zoloft</option>
+                        <option value="Celexa" data-price="7">Celexa</option>
+                        <option value="Lexapro" data-price="2">Lexapro</option>
+                        <option value="Trintellix" data-price="3">Trintellix</option>
+                    </select>
+                    <label for="antidepresseants-quantity">Quantity</label>
+                    <input type="number" id="antidepresseants-quantity" name="antidepresseants-quantity" value="1" min="0">
+
+                    <label for="antihistamines">Antihistamines</label>
+                    <select id="antihistamines" name="antihistamines">
+                        <option value="Benadryl" data-price="10">Benadryl</option>
+                        <option value="Chlor-Trimeton" data-price="5">Chlor-Trimeton</option>
+                        <option value="Allegra" data-price="9">Allegra</option>
+                        <option value="Clarinex" data-price="7">Clarinex</option>
+                    </select>
+                    <label for="antihistamines-quantity">Quantity</label>
+                    <input type="number" id="antihistamines-quantity" name="antihistamines-quantity" value="1" min="0">
+
+                    <label for="antihypertensives">antihypertensives</label>
+                    <select id="antihypertensives" name="antihypertensives">
+                        <option value="amlodipine" data-price="10">amlodipine</option>
+                        <option value="nifedipine" data-price="5">nifedipine</option>
+                        <option value="nicardipine" data-price="9">nicardipine</option>
+                        <option value="verapamil" data-price="7">verapamil</option>
+                        <option value="Diuretics" data-price="9">Diuretics</option>
+                        <option value="Vasodilator" data-price="10">Vasodilator</option>
+                    </select>
+                    <label for="antihypertensives-quantity">Quantity:</label>
+                    <input type="number" id="antihypertensives-quantity" name="antihypertensives-quantity" value="1" min="0">
+
+
+                    <button type="button" id="add-to-summary">Add to Summary</button>
                 </form>
+
             </div>
+
             <div class="medicine-summary">
                 <h3>Summary</h3>
-                <div class="summary-list">
-                    <p>empty cart</p>
-                </div>
-                <button type="submit" disabled>save&publish</button>
-
+                <table id="summary-table" class="summary-table">
+                    <thead>
+                        <tr>
+                            <th>Medicine</th>
+                            <th>Quantity</th>
+                            <th>Price</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="3"><strong>Total price:</strong></td>
+                            <td id="total-price">$0.00</td>
+                        </tr>
+                    </tfoot>
+                </table>
+                <button type="button" id="save-favourites">Save to Favourites</button>
+                <button type="button" id="apply-favourites">Apply Favourites</button>
+                <br>
+                <a href="order.html">
+                    <button type="button" id="order">Order Now</button>
+                </a>
             </div>
         </div>
     </div>
 </main>
+
+<script>
+let cart = [];
+
+function addToCart(item, price, quantity) {
+	if (quantity > 0) {
+		cart.push({item, price, quantity});
+		updateCartTable();
+	}
+}
+
+function updateCartTable() {
+    const tableBody = document.getElementById('summary-table').getElementsByTagName('tbody')[0];
+    tableBody.innerHTML = '';
+    let total = 0;
+
+    cart.forEach((product, index) => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+            
+            <td>${product.item}</td>
+            <td>${product.quantity}</td>
+            <td>$${product.price.toFixed(2)}</td>
+            <td>$${(product.price * product.quantity).toFixed(2)}</td>
+        `;
+        tableBody.appendChild(row);
+        total += product.price * product.quantity;
+    });
+
+
+    document.getElementById('total-price').textContent = `$${total.toFixed(2)}`;
+}
+
+document.getElementById('add-to-summary').addEventListener('click', function() {
+    const anagelics = document.getElementById('anagelics').value;
+    const anagelicsPrice = parseFloat(document.querySelector('#anagelics option:checked').getAttribute('data-price'));
+    const anagelicsQuantity = parseInt(document.getElementById('anagelics-quantity').value);
+
+    const antibiotics = document.getElementById('antibiotics').value;
+    const antibioticsPrice = parseFloat(document.querySelector('#antibiotics option:checked').getAttribute('data-price'));
+    const antibioticsQuantity = parseInt(document.getElementById('antibiotics-quantity').value);
+
+    const antidepresseants = document.getElementById('antidepresseants').value;
+    const antidepresseantsPrice = parseFloat(document.querySelector('#antidepresseants option:checked').getAttribute('data-price'));
+    const antidepresseantsQuantity = parseInt(document.getElementById('antidepresseants-quantity').value);
+
+    const antihistamines = document.getElementById('antihistamines').value;
+    const antihistaminesPrice = parseFloat(document.querySelector('#antihistamines option:checked').getAttribute('data-price'));
+    const antihistaminesQuantity = parseInt(document.getElementById('antihistamines-quantity').value);
+
+    const antihypertensives = document.getElementById('antihypertensives').value;
+    const antihypertensivesPrice = parseFloat(document.querySelector('#antihypertensives option:checked').getAttribute('data-price'));
+    const antihypertensivesQuantity = parseInt(document.getElementById('antihypertensives-quantity').value);
+
+
+    addToCart(anagelics, anagelicsPrice, anagelicsQuantity);
+    addToCart(antibiotics, antibioticsPrice, antibioticsQuantity);
+    addToCart(antidepresseants, antidepresseantsPrice, antidepresseantsQuantity);
+    addToCart(antihistamines, antihistaminesPrice, antihistaminesQuantity);
+    addToCart(antihypertensives, antihypertensivesPrice, antihypertensivesQuantity);
+});
+
+document.getElementById('save-favourites').addEventListener('click', function() {
+    localStorage.setItem('favoriteOrder', JSON.stringify(cart));
+    alert('order saved to favourites');
+});
+
+document.getElementById('apply-favourites').addEventListener('click', function() {
+    const favourite = JSON.parse(localStorage.getItem('favoriteOrder'));
+    if (favourite) {
+        cart = favourite;
+        updateCartTable();
+    } else {
+        alert('no favourite order found');
+    }
+});
+
+document.getElementById('order').addEventListener('click', function() {
+    if (cart.length === 0) {
+        alert('cart is empty');
+        return;
+    }
+    localStorage.setItem('currentOrder', JSON.stringify(cart));
+    window.location.href = 'checkout.html';
+});
+
+</script>
 <footer>
     <div class="footer">
-       <p>Contact us on +86 170 5821 1136</p>
+        <p>Contact us on +86 170 5821 1136</p>
         <p>VitaliHealthCenter@gmail.com</p>
         <p>Follow our socials</p>
     </div>
- </footer>
+</footer>
 </body>
 </html>

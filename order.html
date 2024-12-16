@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user=scalable=no">
+    <title>Home</title>
+    <link rel="icon" type="image/x-icon" href="logo.ico">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+ <header>   
+    <div class="logo">
+        <img src="logo.png" alt="logo">
+    </div>
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="Doctors.html">Doctors</a></li>
+        <li><a href="Consultation.html">Consultation</a></li>
+        <li><a href="pharmacy.html">Pharmacy</a></li>
+    </ul>
+</nav>
+ </header>
+
+    <main>
+        <h1>Complete Your Order</h1>
+        <form id="order-form">
+            <h2>Patient details</h2>
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" required>
+            <label for="email">Email:</label>
+            <input type="text" id="email" required>
+
+            <h2>Delivery Details</h2>
+            <label for="address">Address:</label>
+            <input type="text" id="address" required>
+            <label for="city">Town/City:</label>
+            <input type="text" id="city" required>
+            <label for="post">Postal code:</label>
+            <input type="text" id="post" required>
+
+            <h2>Payment Details</h2>
+            <label for="card-holder">Cardholder's Name:</label>
+            <input type="text" id="card-holder" required>
+            <label for="card-number">Card Number:</label>
+            <input type="text" id="card-number" required>
+            <label for="expiry">Expiry Date:</label>
+            <input type="month" id="expiry" required>
+            <label for="CVV">CVV:</label>
+            <input type="text" id="CVV" required>
+
+            <button type="button" id="pay">Place order</button>
+        </form>
+    </main>
+
+<script>
+    document.getElementById('pay').addEventListener('click', function() {
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const address = document.getElementById('address').value;
+        const city = document.getElementById('city').value;
+        const post = document.getElementById('post').value;
+        const cardHolder = document.getElementById('card-holder').value;
+        const cardNumber = document.getElementById('card-number').value;
+        const expiry = document.getElementById('expiry').value;
+        const CVV = document.getElementById('CVV').value;
+
+        if (name && email && address && city && post && cardHolder && cardNumber && expiry && CVV) {
+            alert('Thank you for your purchase, You will recive your order in 2-3 business days.');
+        } else {
+            alert('Please fill in all the required fiedls');
+        }
+    });
+</script>
+
+    <footer>
+        <div class="footer">
+           <p>Contact us on +86 170 5821 1136</p>
+            <p>VitaliHealthCenter@gmail.com</p>
+            <p>Follow our socials</p>
+        </div>
+    </footer>
+</body>
+</html>

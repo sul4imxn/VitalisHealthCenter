@@ -112,7 +112,7 @@ position: relative;
     color: #9b9b9b;
     font-size: small;
     display: -webkit-box;
-    -webkit-line-clamp: 3;
+        /* -webkit-line-clamp: 3; */
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -262,6 +262,7 @@ td, th {
 }
 
 footer {
+    padding-top: 20px;
     background-color: #6e6e87;
     padding: 20px;
     position: relative;   
@@ -479,6 +480,14 @@ button:disabled{
 
 .medicine-summary button{
     background-color: #9b9b9b;
+}
+
+h1 {
+    color: #000000;
+}
+
+h2 {
+    color: #000000;
 }
 
 @media (max-width: 768px){
